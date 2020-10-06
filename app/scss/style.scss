@@ -1,0 +1,35 @@
+@import "vars";
+@import "mixins";
+@import "components";
+h1,h2,h3,h4 {
+  font-family: $font-family-bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-family-default;
+  margin: 0;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 0 75px;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+.header {
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+main {
+  margin: 70px auto;
+}
+
+
+@import "responsive";

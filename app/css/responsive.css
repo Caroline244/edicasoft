@@ -1,0 +1,101 @@
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+    padding: 0 30px;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 207px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: -500px;
+    background-size: 1472px 982px;
+  }
+  .form {
+    margin-left: 65px;
+    padding: 40px 22px 35px;
+  }
+  .article__image {
+    min-width: 344px;
+    height: 350px;
+    overflow: hidden;
+  }
+  .image-cake {
+    background-image: url("../img/image1-min.png");
+    background-repeat: no-repeat;
+    background-size: 570px;
+    background-position: -160px -20px;
+  }
+  .image-vanila {
+    background-image: url("../img/image2-min.png");
+    background-repeat: no-repeat;
+    background-size: 660px;
+    background-position: -110px -10px;
+  }
+  .article.article--reverse .article__text {
+    margin-right: 52px;
+  }
+  .article:not(.article--reverse) .article__text {
+    margin-left: 52px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .container {
+    max-width: 560px;
+    padding: 0 15px;
+  }
+  header .container {
+    flex-flow: column;
+    padding: 50px 15px;
+    align-items: flex-start;
+  }
+  header {
+    height: 800px;
+  }
+  .article, .article.article--reverse {
+    flex-flow: column;
+  }
+  .article .article__text, .article.article--reverse .article__text {
+    margin: 0;
+  }
+  .form {
+    margin: 40px 0 0 0;
+    width: 100%;
+  }
+  .header__text {
+    width: 300px;
+    padding-right: 15px;
+  }
+  header::after {
+    width: calc(100vw - 315px);
+    background-size: 1233px 823px;
+  }
+  .header__text h1 {
+    font-size: 26px;
+    margin: 7px 0 25px 0;
+  }
+  .article__image {
+    background-size: cover;
+    background-position: -82px center;
+  }
+  .article:not(.article--reverse) .article__text, .article .article__text, .article.article--reverse .article__text {
+    margin: 0;
+    max-width: 100%;
+  }
+  .article__text-header {
+    margin: 20px 0 15px;
+  }
+  .article__text-description {
+    margin: 0;
+  }
+  .article + .article {
+    margin-top: 50px;
+  }
+}

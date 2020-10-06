@@ -1,0 +1,147 @@
+@import "vars";
+@import "mixins";
+.button {
+  border-radius: 6px;
+  height: 51px;
+  border: none;
+  cursor: pointer;
+  &--color-aqua {
+    background-color: $color-aqua;
+    @include font($font-family-bold,
+            $font-size-m,
+    $line-height: 32px,
+    $color: $color-black,
+    $letters: initial);
+  }
+}
+.form {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 78px 59px 71px 54px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: $color-dark;
+    opacity: .9;
+  }
+  &__input {
+    @include font($font-family-default, $font-size-m, $line-height: 24px, $color: $color-dark, $letters: initial);
+    height: 48px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: $color-white;
+    border: none;
+    padding: 0 31px;
+    &-warning {
+      box-shadow: 0 0 3px 2px red;
+    }
+    &-success {
+      box-shadow: 0 0 3px 2px green;
+    }
+    &::placeholder {
+      color: $color-dark;
+    }
+    &-name {
+      border-radius: 4px;
+    }
+  }
+  &__submit {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    @include font($font-family-light, $font-size-xs, $line-height: 23px, $color: $color-darkGray, $letters: initial);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+}
+.article {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  &--reverse {
+    flex-flow: row-reverse;
+  }
+  & + & {
+    margin-top: 50px;
+  }
+  &__text {
+    max-width: 367px;
+    width: 100%;
+    &-header {
+      @include font($font-family-bold, $font-size-l, $line-height: 34px, $color: $color-black, $letters: -0.5px);
+      margin: 0 auto 30px 0;
+    }
+    &-description {
+      @include font($font-family-default, $font-size-m, $line-height: 28px, $color: $color-darkGray, $letters: 0px);
+    }
+  }
+  &__image {
+    max-width: 627px;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    &.image-cake {
+      background-image: url("../img/image1-min.png");
+      background-repeat: no-repeat;
+      background-size: 753px;
+      background-position: -120px -20px;
+    }
+    &.image-vanila {
+      background-image: url("../img/image2-min.png");
+      background-repeat: no-repeat;
+      background-size: 960px;
+      background-position: -110px -100px;
+    }
+  }
+}
+.header {
+  position: relative;
+  background-color: $color-lightAqua;
+  height: 770px;
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: auto;
+  }
+  &__text {
+    width: 300px;
+    h4 {
+      @include font($font-family-bold, $font-size-s, 20px, $color-gray, 1.08px);
+      margin: 0;
+    }
+    h1 {
+      @include font($font-family-bold, $font-size-xl, 38px, $color-black, -1.27px);
+      margin: 7px 0 29px 0;
+    }
+    p {
+      @include font($font-family-default, $font-size-m, $line-height: 28px, $color: $color-darkGray, $letters: initial);
+      margin:0;
+    }
+  }
+}
